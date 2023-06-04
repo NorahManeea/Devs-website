@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --white: #fff;
+    --grey: #c4c4c4;
+    --light-purple: #564ccf;
+}
 html{
     font-size: 16px;
     font-family: 'Tajawal', sans-serif;
@@ -23,7 +28,7 @@ nav{
     height: 10vh;
 }  
 nav .logo{
-    color: #564ccf;
+    color: var(--light-purple);
     font-size: 3rem;
 }
 nav .nav-items{
@@ -37,7 +42,7 @@ nav .nav-items .nav-item{
 }
 .nav-item .nav-link{
     text-decoration: none;
-    color: #c4c4c4;
+    color: var(--grey);
  
 }
 .nav-item .nav-link:hover{
@@ -47,7 +52,7 @@ nav .nav-items .nav-item{
     font-family: inherit;
     padding: 0.75rem 2rem;
     border: none;
-    color: #fff;
+    color: var(--white);
     border-radius: 1rem;
     cursor: pointer;
     font-size: 1rem;
@@ -60,8 +65,10 @@ nav .nav-items .nav-item{
 .cta.dark:hover{
     background-color: #2d303b;
 }
+/* Hero */
+
 .hero{
-    height: 60vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,16 +83,71 @@ nav .nav-items .nav-item{
     margin-bottom: 40px;
 }
 .hero span{
-    color: #564ccf;
+    color: var(--light-purple);
 }
 .cta.purple{
-    background-color: #564ccf;
+    background-color: var(--light-purple);
     transition: background-color 0.3s;
 }
 .cta.purple:hover{
-    background-color: #5f53e9;
+    background-color: var(--light-purple);
 }
 .hero .cta.purple{
     margin-left: 15px;
 }
+
+/* Features */
+.features{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.features h3{
+    color: #fafaf5; 
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.features h6{
+    color: var(--grey); 
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.feature{
+    background-color: #252731;
+    display: flex;
+    border-radius: 3rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 10px 10px 10px rgba(0,0,0, 0.5);
+
+}
+.feature .content{
+    padding: 4rem;
+    flex: 1;
+}
+.feature .content i{
+    color: #4a41b4;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.feature .content h2{
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.feature .content p{
+    color: var(--grey);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    width: 80%;
+    line-height: 2;
+}
+.feature img{
+    flex: 1;
+    max-width: 50%;
+}
+
+
+
 
