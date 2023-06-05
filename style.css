@@ -38,7 +38,7 @@ nav .nav-items{
 }
 nav .nav-items .nav-item{
     padding-left: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 .nav-item .nav-link{
     text-decoration: none;
@@ -48,6 +48,12 @@ nav .nav-items .nav-item{
 .nav-item .nav-link:hover{
     color: #fafaf5;
 }
+nav #mobile-toggle {
+    display: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+  }
 .cta{
     font-family: inherit;
     padding: 0.75rem 2rem;
@@ -68,7 +74,7 @@ nav .nav-items .nav-item{
 /* Hero */
 
 .hero{
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,6 +229,77 @@ footer i{
 }
 footer i:hover{
     color: var(--light-purple);
+}
+
+/* Responsive */
+@media screen and (max-width: 1450px){
+    main{
+        max-width: 1024px;
+    }
+}
+@media screen and (max-width: 1050px){
+    main{
+        max-width: 760px;
+    }
+    .features-list img{
+        display: none;
+    }
+    .details-list{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px){
+    main{
+        max-width: 600px;
+    }
+    
+    .details-list{
+        grid-template-columns: 1fr;
+    }
+    html{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    main{
+        margin: 2rem;
+        text-align: center;
+    }
+    .feature .content p {
+        width: 100%;
+      }
+      .hero {
+        margin: 5rem 0;
+      }
+      .hero h1 {
+        width: 80%;
+      }
+      nav #mobile-toggle {
+        display: block;
+      }
+      nav .nav-items {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        left: 0;
+        top: 12vh;
+        width: 100%;
+        height: 50%;
+        background-color: #564ccf;
+      }
+    
+      nav .nav-items.active {
+        display: flex;
+      }
+    
+      nav .nav-items .nav-item {
+        padding: 2rem 0;
+        font-size: 1.4rem;
+      }
+    
 }
 
 
